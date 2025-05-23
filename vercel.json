@@ -1,27 +1,7 @@
 {
-    "version": 2,
-    "builds": [
-      {
-        "src": "main.py",
-        "use": "@vercel/python",
-        "config": {
-          "maxLambdaSize": "15mb",
-          "runtime": "python3.10"
-        }
-      },
-      {
-        "src": "static/**",
-        "use": "@vercel/static"
-      },
-      {
-        "src": "templates/**",
-        "use": "@vercel/static"
-      }
-    ],
-    "routes": [
-      {
-        "src": "/(.*)",
-        "dest": "main.py"
-      }
-    ]
-  }
+  "cleanUrls": true,
+  "rewrites": [
+    { "source": "/sobre", "destination": "/sobre.html" },
+    { "source": "/contatos", "destination": "/contatos.html" }
+  ]
+}
