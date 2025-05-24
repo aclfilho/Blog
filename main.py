@@ -1,51 +1,64 @@
+from dataclasses import dataclass
 from fastapi import FastAPI, Request
-from fastapi import Depends
 from fastapi.templating import Jinja2Templates
 from fastapi.staticfiles import StaticFiles
 from pathlib import Path
 
-from database import SessionLocal
-from models import Projeto, Base
-from sqlalchemy.orm import Session
-from sqlalchemy import select
+from dataclasses import dataclass, field
+from typing import List
 
 app = FastAPI()
-
-# cria tabelas (caso ainda não existam)
-Base.metadata.create_all(bind=SessionLocal().get_bind())
 
 # Configurações de caminho
 BASE_DIR = Path(__file__).resolve().parent
 templates = Jinja2Templates(directory=str(BASE_DIR / "templates"))
 app.mount("/static", StaticFiles(directory=str(BASE_DIR / "static")), name="static")
 
-# Dependência para obter uma sessão do banco
-def get_db():
-    db = SessionLocal()
-    try:
-        yield db
-    finally:
-        db.close()
+@dataclass
+class Projeto:
+    id: int
+    nome: str
+    descricao: str
+    link: str
+    tecnologias: List[str]
+    status: str         
+    categoria: str      
 
+# Lista de projetos como objetos Projeto
+# Projetos definidos manualmente com os campos certos
+projetos = [
+    Projeto(
+        id=1,
+        nome="Chatbot FURIA",
+        descricao="Um chatbot desenvolvido para os fãs do time de CS:GO da FURIA",
+        tecnologias=["Python", "FastAPI", "HTML", "CSS"],
+        status="Concluído",
+        categoria="Fullstack",
+        link="https://furia-bot-pi.vercel.app"
+    ),
+    Projeto(
+        id=2,
+        nome="Treinos",
+        descricao="Interface dinâmica para inserir e armazenar meus treinos de forma organizada e que eu possa analisá-los.",
+        tecnologias=["Python", "MySQL"],
+        status="Concluído",
+        categoria="Backend",
+        link="https://github.com/aclfilho/First-project"
+    ),
+]
 
-# configuração para caminho dos templates e arq estáticos
-BASE_DIR = Path(__file__).resolve().parent #pega o caminho da pasta atual
-templates = Jinja2Templates(directory=str(BASE_DIR / "templates")) #diz ao FastAPI onde estão os html
-app.mount("/static", StaticFiles(directory=str(BASE_DIR / "static")), name="static") #permite servir os arquivos estáticos que ficam em static
-
-
-#p ágina inicial usando dados reais do banco
 @app.get("/")
-def home(request: Request, db: Session = Depends(get_db)):
-    projetos = db.execute(select(Projeto)).scalars().all()
+def home(request: Request):
     return templates.TemplateResponse("index.html", {"request": request, "projetos": projetos})
-
 
 @app.get("/sobre")
 def sobre(request: Request):
     return templates.TemplateResponse("sobre.html", {"request": request})
 
-
 @app.get("/contato")
 def contato(request: Request):
     return templates.TemplateResponse("contato.html", {"request": request})
+
+@app.get("/projetos")
+def pagina_projetos(request: Request):
+    return templates.TemplateResponse("projetos.html", {"request": request, "projetos": projetos})

@@ -2,33 +2,36 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Portfólio - André Coronel</title>
+    <title>Blog - André Coronel</title>
     <link rel="stylesheet" href="/static/style.css"> 
 </head>
 <body>
     <header>
         <h1>André Coronel</h1>
         <nav>
-        <a href="/">Início</a>
-        <a href="/sobre">Sobre</a>
-        <a href="/contato">Contato</a>
-        
+            <a href="/">Início</a>
+            <a href="/sobre">Sobre</a>
+            <a href="/contato">Contato</a>
+            <a href="/projetos">Projetos</a>
         </nav>
     </header>
 
     <main>
-        <h2>Projetos</h2>
-        <ul>
-            {% for projeto in projetos %}
-                <li>
-                    <h3>{{ projeto.titulo }}</h3>
-                    <p>{{ projeto.descricao }}</p>
-                    <p><strong>Tecnologias:</strong> {{ projeto.tecnologia }}</p>
-                    <a href="{{ projeto.link }}" target="_blank">Ver projeto</a>
-                </li>
-                <hr>
-            {% endfor %}
-        </ul>
+        <section class="intro">
+            <h2>Olá, eu sou o André!</h2>
+            <p>Sou desenvolvedor backend com foco em <strong>Python</strong>, <strong>automação</strong>, <strong>data science</strong> e <strong>criação de APIs com FastAPI</strong>. Neste blog, compartilho meus projetos, ideias e aprendizados.</p>
+        </section>
+
+        <section class="acesso-projetos">
+            <h3>Acesse meus Projetos</h3>
+            <p>Você pode visualizar meus projetos clicando na aba <a href="/projetos"><strong>"Projetos"</strong></a> no menu acima.</p>
+            <p>Cada projeto contém descrição, tecnologias utilizadas, status de desenvolvimento e link para o repositório ou aplicação online.</p>
+        </section>
+
+        <section class="chamada-contato">
+            <h3>Fale Comigo</h3>
+            <p>Se tiver interesse em conversar, colaborar ou fazer alguma sugestão, visite a página de <a href="/contato"><strong>contato</strong></a>.</p>
+        </section>
     </main>
 </body>
 </html>

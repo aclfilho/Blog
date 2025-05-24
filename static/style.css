@@ -63,3 +63,41 @@ a {
 a:hover {
     text-decoration: underline;
 }
+
+
+
+.status {
+    font-weight: bold;
+    padding: 4px 8px;
+    border-radius: 8px;
+    display: inline-block;
+}
+
+.status-concluido {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.status-em-desenvolvimento {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+.status-pendente {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+
+main section {
+    margin-bottom: 2rem;
+}
+
+a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}

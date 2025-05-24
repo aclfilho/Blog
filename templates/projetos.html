@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Projetos - André Coronel</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <header>
+        <h1>Projetos</h1>
+        <nav>
+            <a href="/">Início</a>
+            <a href="/sobre">Sobre</a>
+            <a href="/contato">Contato</a>
+            <a href="/projetos">Projetos</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Projetos</h2>
+        <ul>
+        {% for projeto in projetos %}
+            <li>
+                <h3>{{ projeto.nome }}</h3>
+                <p>{{ projeto.descricao }}</p>
+                <p><strong>Tecnologias:</strong> {{ projeto.tecnologias | join(', ') }}</p>
+                <p>
+                    <strong>Status:</strong>
+                    <span class="status 
+                        {% if projeto.status.lower() == 'concluído' %}
+                            status-concluido
+                        {% elif projeto.status.lower() == 'em desenvolvimento' %}
+                            status-em-desenvolvimento
+                        {% else %}
+                            status-pendente
+                        {% endif %}
+                    ">
+                    {{ projeto.status }}
+                    </span>
+                </p>
+                <p><strong>Categoria:</strong> {{ projeto.categoria }}</p>
+                <a href="{{ projeto.link }}" target="_blank">Ver projeto</a>
+            </li>
+            <hr>
+        {% endfor %}
+        </ul>
+    </main>
+</body>
+</html>
