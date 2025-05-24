@@ -11,7 +11,7 @@ header {
     color: #003366;
     padding: 2rem;
     text-align: left;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 4px #0164c7;
 }
 
 header h1 {
@@ -61,6 +61,7 @@ a {
 }
 
 a:hover {
+    color: #007BFF;
     text-decoration: underline;
 }
 
@@ -101,3 +102,4 @@ a {
 a:hover {
     text-decoration: underline;
 }
+

@@ -4,21 +4,24 @@
     <meta charset="UTF-8">
     <title>Projetos - André Coronel</title>
     <link rel="stylesheet" href="/static/style.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 </head>
 <body>
     <header>
-        <h1>Projetos</h1>
-        <nav>
-            <a href="/">Início</a>
-            <a href="/sobre">Sobre</a>
-            <a href="/contato">Contato</a>
-            <a href="/projetos">Projetos</a>
-        </nav>
+            <h1>Projetos em destaque</h1>
+            <a href="/" style="margin-right: 20px;"><i class="fas fa-home"></i> Início</a>
+            <a href="/contato" style="margin-right: 20px;"><i class="fas fa-envelope"></i> Contato</a>
+            <a href="/projetos"><i class="fas fa-code"></i> Projetos</a>
     </header>
 
     <main>
-        <h2>Projetos</h2>
         <ul>
+           <h2>Confira minhas experiências</h2>
         {% for projeto in projetos %}
             <li>
                 <h3>{{ projeto.nome }}</h3>
@@ -45,5 +48,7 @@
         {% endfor %}
         </ul>
     </main>
+
+
 </body>
 </html>
