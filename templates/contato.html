@@ -1,41 +1,58 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <title>Contato</title>
-    <link rel="stylesheet" href="/static/style.css">
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+  <meta charset="UTF-8" />
+  <title>Contato - André Coronel</title>
+  <link rel="stylesheet" href="/static/style.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
 </head>
 <body>
-    <header>
-        <h1>Entre em contato</h1>
-               <nav>
-            <a href="/" style="margin-right: 20px;"><i class="fas fa-home"></i> Início</a>
-            <a href="/contato" style="margin-right: 20px;"><i class="fas fa-envelope"></i> Contato</a>
-            <a href="/projetos"><i class="fas fa-code"></i> Projetos</a>
-        </nav>
-    </header>
+  <div class="container">
+    <aside class="sidebar">
+      <div class="logo">
+        <i class="fas fa-terminal"></i>
+        <span>André Coronel</span>
+      </div>
+      <nav class="nav-menu">
+        <a href="/"><i class="fas fa-home"></i><span>Início</span></a>
+        <a href="/projetos"><i class="fas fa-code"></i><span>Projetos</span></a>
+        <a href="/contato"><i class="fas fa-envelope"></i><span>Contato</span></a>
+      </nav>
+    </aside>
 
-    <main>
-        <section>
-            <h2>Entre em Contato</h2>
-            <p>Você pode me encontrar pelos seguintes canais:</p>
-            <ul>
-                <li>Email: <a href="mailto:coronel.filho@hotmail.com">coronel.filho@hotmail.com</a></li>
-                <li>WhatsApp: <a href="https://wa.me/5579991055995" target="_blank">+55 (79) 99105-5995</a></li>
-                <li>GitHub: <a href="https://github.com/aclfilho" target="_blank">github.com/aclfilho</a></li>
-                <li>LinkedIn: <a href="https://www.linkedin.com/in/andrecoronell" target="_blank">linkedin.com/in/andre-coronel</a></li>
-            </ul>
-        </section>
+    <main class="conteudo">
+      <h1>Entre em Contato</h1>
+      <section>
+        <p>Você pode me encontrar pelos seguintes canais:</p>
+        <ul class="contato-lista">
+          <li>
+            <i class="fas fa-envelope"></i>
+            Email: <a href="mailto:coronel.filho@hotmail.com">coronel.filho@hotmail.com</a>
+          </li>
+          <li>
+            <i class="fab fa-whatsapp"></i>
+            WhatsApp: <a href="https://wa.me/5579991055995" target="_blank">+55 (79) 99105-5995</a>
+          </li>
+          <li>
+            <i class="fab fa-github"></i>
+            GitHub: <a href="https://github.com/aclfilho" target="_blank">github.com/aclfilho</a>
+          </li>
+          <li>
+            <i class="fab fa-linkedin"></i>
+            LinkedIn: <a href="https://www.linkedin.com/in/andrecoronell" target="_blank">linkedin.com/in/andre-coronel</a>
+          </li>
+        </ul>
+      </section>
     </main>
+  </div>
 
-    <footer>
+  <footer style="text-align: center; padding: 1rem; background-color: #f1f5f9;">
     <p>© 2025 André Coronel | Desenvolvido com Python</p>
-    </footer>
+  </footer>
 </body>
 </html>

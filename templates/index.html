@@ -1,43 +1,47 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <title>Projetos - André Coronel</title>
-    <link rel="stylesheet" href="/static/style.css">
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+  <meta charset="UTF-8" />
+  <title>Blog - André Coronel</title>
+  <link rel="stylesheet" href="/static/style.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
 </head>
 <body>
-    <header>
-        
-            <h1>Meu blog</h1>
-       <nav>
-            <a href="/" style="margin-right: 20px;"><i class="fas fa-home"></i> Início</a>
-            <a href="/contato" style="margin-right: 20px;"><i class="fas fa-envelope"></i> Contato</a>
-            <a href="/projetos"><i class="fas fa-code"></i> Projetos</a> 
-</nav>
-    </header>
+  <div class="container">
+    <aside class="sidebar">
+      <div class="logo">
+        <i class="fas fa-terminal"></i>
+        <span>André Coronel</span>
+      </div>
+      <nav class="nav-menu">
+        <a href="/"><i class="fas fa-home"></i><span>Início</span></a>
+        <a href="/projetos"><i class="fas fa-code"></i><span>Projetos</span></a>
+        <a href="/contato"><i class="fas fa-envelope"></i><span>Contato</span></a>
+      </nav>
+    </aside>
 
-    <main>
-        <section class="intro">
-            <h2>Olá, eu sou o André!</h2>
-            <p>Sou desenvolvedor backend com foco em <strong>Python</strong>, <strong>automação</strong>, <strong>data science</strong> e <strong>criação de APIs com FastAPI</strong>. Neste blog, compartilho meus projetos, ideias e aprendizados.</p>
-        </section>
+    <main class="conteudo">
+      <section class="intro">
+        <h2>Olá, eu sou o André!</h2>
+        <p>Sou desenvolvedor backend com foco em <strong>Python</strong>, <strong>automação</strong>, <strong>data science</strong> e <strong>criação de APIs com FastAPI</strong>. Neste blog, compartilho meus projetos, ideias e aprendizados.</p>
+      </section>
 
-        <section class="acesso-projetos">
-            <h3>Acesse meus Projetos</h3>
-            <p>Você pode visualizar meus projetos clicando na aba <a href="/projetos"><strong>"Projetos"</strong></a> no menu acima.</p>
-            <p>Cada projeto contém descrição, tecnologias utilizadas, status de desenvolvimento e link para o repositório ou aplicação online.</p>
-        </section>
+      <section class="acesso-projetos">
+        <h3>Acesse meus Projetos</h3>
+        <p>Você pode visualizar meus projetos clicando na aba <strong><a href="/projetos">Projetos</a></strong> no menu lateral.</p>
+        <p>Cada projeto contém descrição, tecnologias utilizadas, status de desenvolvimento e link para o repositório ou aplicação online.</p>
+      </section>
 
-        <section class="chamada-contato">
-            <h3>Fale Comigo</h3>
-            <p>Se tiver interesse em conversar, colaborar ou fazer alguma sugestão, visite a página de <a href="/contato"><strong>contato</strong></a>.</p>
-        </section>
+      <section class="chamada-contato">
+        <h3>Fale Comigo</h3>
+        <p>Se tiver interesse em conversar, colaborar ou fazer alguma sugestão, visite a página de <strong><a href="/contato">contato</a></strong>.</p>
+      </section>
     </main>
+  </div>
 </body>
 </html>

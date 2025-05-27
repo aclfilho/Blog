@@ -22,7 +22,7 @@ class Projeto:
     link: str
     tecnologias: List[str]
     status: str         
-    categoria: str      
+    categoria: str   
 
 # Lista de projetos como objetos Projeto
 # Projetos definidos manualmente com os campos certos
@@ -44,6 +44,16 @@ projetos = [
         status="Concluído",
         categoria="Backend",
         link="https://github.com/aclfilho/First-project"
+    ),
+    
+    Projeto(
+        id=3,
+        nome="EDA Análise Preditiva",
+        descricao="Análise preditiva e modelo de ML para previsões de preços de imóveis.",
+        tecnologias=["Python"],
+        status="Concluído",
+        categoria="Análise de dados",
+        link="https://github.com/aclfilho/Projeto-LH-CD/tree/main"
     ),
 ]
 
