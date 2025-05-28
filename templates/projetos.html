@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8" />
-    <title>Projetos - André Coronel</title>
-    <link rel="stylesheet" href="/static/style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+  <meta charset="UTF-8" />
+  <title>Projetos - André Coronel</title>
+  <link rel="stylesheet" href="/static/style.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
 </head>
 <body>
   <div class="container">
@@ -29,32 +29,38 @@
       <h1>Projetos em destaque</h1>
       <section>
         <h2>Confira minhas experiências</h2>
-        <ul>
+        <div class="cards-container">
           {% for projeto in projetos %}
-            <li>
-              <h3>{{ projeto.nome }}</h3>
-              <p>{{ projeto.descricao }}</p>
-              <p><strong>Tecnologias:</strong> {{ projeto.tecnologias | join(', ') }}</p>
-              <p>
-                <strong>Status:</strong>
-                <span class="status 
-                  {% if projeto.status.lower() == 'concluído' %}
-                    status-concluido
-                  {% elif projeto.status.lower() == 'em desenvolvimento' %}
-                    status-em-desenvolvimento
-                  {% else %}
-                    status-pendente
-                  {% endif %}
-                ">
-                  {{ projeto.status }}
-                </span>
-              </p>
-              <p><strong>Categoria:</strong> {{ projeto.categoria }}</p>
-              <a href="{{ projeto.link }}" target="_blank">Ver projeto</a>
-            </li>
-            <hr>
+          <div class="project-card">
+  <div class="project-image">
+    <img src="{{ projeto.imagem }}" alt="Imagem do Projeto">
+  </div>
+  <div class="project-content">
+    <h3>{{ projeto.nome }}</h3>
+    <p>{{ projeto.descricao }}</p>
+    <p><strong>Tecnologias:</strong> {{ projeto.tecnologias | join(', ') }}</p>
+    <p>
+      <strong>Status:</strong>
+      <span class="status 
+        {% if projeto.status.lower() == 'concluído' %}
+          status-concluido
+        {% elif projeto.status.lower() == 'em desenvolvimento' %}
+          status-em-desenvolvimento
+        {% else %}
+          status-pendente
+        {% endif %}
+      ">
+        {{ projeto.status }}
+      </span>
+    </p>
+    <p><strong>Categoria:</strong> {{ projeto.categoria }}</p>
+    <a class="project-link" href="{{ projeto.link }}" target="_blank">
+      <i class="fas fa-external-link-alt"></i> Ver projeto
+    </a>
+  </div>
+</div>
           {% endfor %}
-        </ul>
+        </div>
       </section>
     </main>
   </div>

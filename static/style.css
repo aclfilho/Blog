@@ -2,19 +2,19 @@
 body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f4f6f9;
-  color: #1a1a1a;
+  background-color: #fdf6e3;
+  color: #4b2e2e;
 }
 
 a {
-  color: #2563eb;
+  color: #d9a066;
   text-decoration: none;
   font-weight: bold;
 }
 
 a:hover {
   text-decoration: underline;
-  color: #1d4ed8;
+  color: #a65e2e;
 }
 
 /* Layout principal */
@@ -23,11 +23,11 @@ a:hover {
   min-height: 100vh;
 }
 
-/* Sidebar moderna */
+/* Sidebar temática café */
 .sidebar {
   width: 240px;
-  background-color: #1e293b;
-  color: #ffffff;
+  background-color: #4b2e2e;
+  color: #fffaf0;
   display: flex;
   flex-direction: column;
   padding: 2rem 1rem;
@@ -35,15 +35,16 @@ a:hover {
 }
 
 .logo {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   font-weight: bold;
   display: flex;
   align-items: center;
   gap: 10px;
   margin-bottom: 2rem;
-  color: #ffffff;
+  color: #fffaf0;
 }
 
+/* Menu */
 .nav-menu {
   display: flex;
   flex-direction: column;
@@ -56,32 +57,28 @@ a:hover {
   gap: 12px;
   padding: 0.75rem 1rem;
   border-radius: 8px;
-  color: #cbd5e1;
-  text-decoration: none;
+  color: #fdf6e3;
   transition: background-color 0.2s, color 0.2s;
 }
 
 .nav-menu a:hover {
-  background-color: #334155;
-  color: #ffffff;
-}
-
-.nav-menu i {
-  font-size: 1.2rem;
+  background-color: #6b4f3b;
+  color: #fffaf0;
 }
 
 /* Conteúdo principal */
 .conteudo {
   flex: 1;
   padding: 2rem;
+  background-color: #fffaf0;
 }
 
 main h1, main h2, main h3 {
-  color: #1e293b;
+  color: #4b2e2e;
   margin-bottom: 1rem;
 }
 
-/* Estilização da lista de contatos */
+/* Lista de contatos */
 .contato-lista {
   list-style: none;
   padding: 0;
@@ -94,30 +91,25 @@ main h1, main h2, main h3 {
   display: flex;
   align-items: center;
   gap: 10px;
-  background-color: #f1f5f9;
+  background-color: #fcebd5;
   padding: 1rem;
   border-radius: 8px;
-  border: 1px solid #dbeafe;
+  border: 1px solid #c7a17a;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .contato-lista li:hover {
   transform: scale(1.02);
-  box-shadow: 0 4px 10px rgba(0, 89, 179, 0.1);
-}
-
-.contato-lista i {
-  font-size: 1.2rem;
-  color: #334155;
+  box-shadow: 0 4px 10px rgba(75, 46, 46, 0.2);
 }
 
 /* Footer */
 footer {
   text-align: center;
   padding: 1rem;
-  background-color: #f1f5f9;
+  background-color: #fcebd5;
   font-size: 0.9rem;
-  color: #555;
+  color: #4b2e2e;
 }
 
 /* Responsivo básico */
@@ -145,4 +137,75 @@ footer {
   .logo {
     display: none;
   }
+}
+
+/* Cards */
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.project-card {
+  background: #fffaf0;
+  color: #4b2e2e;
+  border-radius: 20px;
+  overflow: hidden;
+  width: 350px;
+  box-shadow: 0 10px 25px rgba(75, 46, 46, 0.2);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-image img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.project-content {
+  padding: 20px;
+}
+
+.project-content h3 {
+  margin-top: 0;
+  font-size: 22px;
+}
+
+.project-link {
+  display: inline-block;
+  margin-top: 10px;
+  color: #d9a066;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.project-link i {
+  margin-right: 5px;
+}
+
+/* Status */
+.status {
+  padding: 2px 8px;
+  border-radius: 5px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.status-concluido {
+  background-color: #6b8e23;
+}
+
+.status-em-desenvolvimento {
+  background-color: #d9a066;
+}
+
+.status-pendente {
+  background-color: #b22222;
 }

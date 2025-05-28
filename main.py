@@ -3,8 +3,6 @@ from fastapi import FastAPI, Request
 from fastapi.templating import Jinja2Templates
 from fastapi.staticfiles import StaticFiles
 from pathlib import Path
-
-from dataclasses import dataclass, field
 from typing import List
 
 app = FastAPI()
@@ -22,10 +20,10 @@ class Projeto:
     link: str
     tecnologias: List[str]
     status: str         
-    categoria: str   
+    categoria: str
+    imagem: str  # <- Recolocado aqui
 
-# Lista de projetos como objetos Projeto
-# Projetos definidos manualmente com os campos certos
+# Lista de projetos
 projetos = [
     Projeto(
         id=1,
@@ -34,7 +32,8 @@ projetos = [
         tecnologias=["Python", "FastAPI", "HTML", "CSS"],
         status="Concluído",
         categoria="Fullstack",
-        link="https://furia-bot-pi.vercel.app"
+        link="https://furia-bot-pi.vercel.app",
+        imagem="static/img/chatbot_furia.jpg"
     ),
     Projeto(
         id=2,
@@ -43,9 +42,9 @@ projetos = [
         tecnologias=["Python", "MySQL"],
         status="Concluído",
         categoria="Backend",
-        link="https://github.com/aclfilho/First-project"
+        link="https://github.com/aclfilho/First-project",
+        imagem="/static/img/treinos.png"  # <- Caminho da imagem
     ),
-    
     Projeto(
         id=3,
         nome="EDA Análise Preditiva",
@@ -53,17 +52,14 @@ projetos = [
         tecnologias=["Python"],
         status="Concluído",
         categoria="Análise de dados",
-        link="https://github.com/aclfilho/Projeto-LH-CD/tree/main"
-    ),
+        link="https://github.com/aclfilho/Projeto-LH-CD/tree/main",
+        imagem="/static/img/eda.png"  # <- Caminho da imagem
+    )
 ]
 
 @app.get("/")
 def home(request: Request):
     return templates.TemplateResponse("index.html", {"request": request, "projetos": projetos})
-
-@app.get("/sobre")
-def sobre(request: Request):
-    return templates.TemplateResponse("sobre.html", {"request": request})
 
 @app.get("/contato")
 def contato(request: Request):
