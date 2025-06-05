@@ -37,13 +37,13 @@ projetos = [
     ),
     Projeto(
         id=2,
-        nome="Treinos",
-        descricao="Interface dinâmica para inserir e armazenar meus treinos de forma organizada e que eu possa analisá-los.",
-        tecnologias=["Python", "MySQL"],
-        status="Concluído",
-        categoria="Backend",
+        nome="Zarro Catálogo",
+        descricao="Site para loja de cerâmica artesanal.",
+        tecnologias=["Python", "HTML", "CSS"],
+        status="Em desenvolvimento",
+        categoria="Web",
         link="https://github.com/aclfilho/First-project",
-        imagem="/static/img/treinos.png"  # <- Caminho da imagem
+        imagem="/static/img/zarro.png"  
     ),
     Projeto(
         id=3,
@@ -53,7 +53,7 @@ projetos = [
         status="Concluído",
         categoria="Análise de dados",
         link="https://github.com/aclfilho/Projeto-LH-CD/tree/main",
-        imagem="/static/img/eda.png"  # <- Caminho da imagem
+        imagem="/static/img/eda.png" 
     )
 ]
 
