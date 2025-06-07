@@ -123,6 +123,18 @@ body {
   border-color: #b88633; /* borda dourada para destaque */
 }
 
+/* --- Mudanças para links fora do menu --- */
+a {
+  color: #4b3621; /* marrom escuro */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #a67c52; /* tom dourado café para hover */
+  text-decoration: underline;
+}
+
 /* Conteúdo principal */
 .conteudo {
   flex: 1;
