@@ -42,7 +42,7 @@ projetos = [
         tecnologias=["Python", "HTML", "CSS"],
         status="Em desenvolvimento",
         categoria="Web",
-        link="https://github.com/aclfilho/First-project",
+        link="https://github.com/aclfilho/zarro",
         imagem="/static/img/zarro.png"  
     ),
     Projeto(
