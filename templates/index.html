@@ -93,4 +93,35 @@
     }
   });
 </script>
+<script>
+  const toggleBtn = document.getElementById('chatbot-toggle');
+  const chatbot = document.querySelector('.chatbot-container');
+  const messages = document.querySelector('.chatbot-messages');
+
+  function addMessage(text, from = 'bot') {
+    const msgDiv = document.createElement('div');
+    msgDiv.textContent = text;
+    msgDiv.classList.add(from === 'user' ? 'user-message' : 'bot-message');
+    messages.appendChild(msgDiv);
+    messages.scrollTop = messages.scrollHeight; // rolar para o fim
+  }
+
+  // Mostrar chatbot e mensagem inicial automaticamente ao carregar a página
+  window.addEventListener('load', () => {
+    chatbot.style.display = 'flex';
+    addMessage('Olá! ☕ Seja bem-vindo ao meu site. Como posso ajudar você hoje?');
+  });
+
+  toggleBtn.addEventListener('click', () => {
+    if (chatbot.style.display === 'flex') {
+      chatbot.style.display = 'none';
+    } else {
+      chatbot.style.display = 'flex';
+      // opcional: adicionar mensagem toda vez que abrir
+      // addMessage('Olá! Como posso ajudar?');
+    }
+  });
+</script>
+
+
 </html>
