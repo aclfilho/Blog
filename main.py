@@ -71,20 +71,3 @@ def contato(request: Request):
 def pagina_projetos(request: Request):
     return templates.TemplateResponse("projetos.html", {"request": request, "projetos": projetos})
 
-
-@app.post("/chatbot/")
-async def chatbot_endpoint(message: str = Form(...)):
-    respostas = [
-        (["oi", "olá", "ola", "hey"], "Olá! Como posso ajudar você?"),
-        (["projeto", "projetos, experiência, experiencia"], "Temos vários projetos interessantes! Dê uma olhada na página de projetos."),
-        (["help", "ajuda", "socorro"], "Claro! Diga como posso ajudar."),
-        # pode adicionar mais pares aqui
-    ]
-
-    user_message = message.lower()
-
-    for keywords, resposta in respostas:
-        if any(keyword in user_message for keyword in keywords):
-            return {"reply": resposta}
-
-    return {"reply": "Desculpe, não entendi. Pode reformular?"}
