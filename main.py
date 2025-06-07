@@ -36,7 +36,7 @@ projetos = [
         categoria="Fullstack",
         link="https://furia-bot-pi.vercel.app",
         imagem="static/img/chatbot_furia.jpg"
-    ),
+       ),
     Projeto(
         id=2,
         nome="Zarro Catálogo",
@@ -70,4 +70,8 @@ def contato(request: Request):
 @app.get("/projetos")
 def pagina_projetos(request: Request):
     return templates.TemplateResponse("projetos.html", {"request": request, "projetos": projetos})
+
+@app.get("/chatbot")
+def pagina_projetos(request: Request):
+    return templates.TemplateResponse("chatbot.html", {"request": request, "projetos": projetos})
 

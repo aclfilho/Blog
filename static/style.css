@@ -26,7 +26,7 @@ a:hover {
 /* Sidebar temática café */
 .sidebar {
   width: 240px;
-  background-color: #3b2e2e; /* mais escuro que #4b2e2e */
+  background-color: #3b2e2e;
   color: #fff8f0;
   display: flex;
   flex-direction: column;
@@ -219,20 +219,17 @@ footer {
   color: #4b2e2e;
 }
 
-/* Aqui está a cor padronizada para todos os parágrafos dentro do conteúdo */
 .project-content p {
   margin: 0;
   font-size: 0.95rem;
-  color: #4b2e2e; /* cor escura e uniforme */
+  color: #4b2e2e;
   line-height: 1.4;
 }
 
-/* Para destacar labels dentro dos parágrafos */
 .project-content p strong {
-  color: #a0522d; /* tom marrom quente para destaque */
+  color: #a0522d;
 }
 
-/* Links nos projetos */
 .project-link {
   margin-top: auto;
   align-self: flex-start;
@@ -246,7 +243,6 @@ footer {
   color: #a0522d;
 }
 
-/* Títulos principais */
 main h1 {
   font-size: 2rem;
   margin-bottom: 0.5rem;
@@ -273,37 +269,36 @@ main h2 {
 
 .status-em-desenvolvimento {
   background-color: #d9a066;
-  color: #4b2e2e; /* texto escuro para melhor contraste */
+  color: #4b2e2e;
 }
 
 .status-pendente {
   background-color: #b22222;
 }
 
-
-/* Container fixo no rodapé */
+/* Chatbot container fixo */
 #chatbot {
   position: fixed;
   bottom: 20px;
   right: 20px;
   width: 320px;
   max-width: 90vw;
-  background: #f3ebe0; /* bege claro, tipo creme de café com leite */
-  border: 2px solid #6f4e37; /* marrom café */
+  background: #f3ebe0;
+  border: 2px solid #6f4e37;
   border-radius: 12px;
   box-shadow: 0 6px 15px rgba(111, 78, 55, 0.4);
   font-family: 'Georgia', serif;
-  color: #4b3621; /* marrom escuro */
+  color: #4b3621;
   z-index: 9999;
   display: flex;
   flex-direction: column;
   overflow: hidden;
 }
 
-/* Cabeçalho */
+/* Cabeçalho do chatbot */
 #chatbot-header {
-  background: #6f4e37; /* marrom café */
-  color: #f3ebe0; /* bege claro */
+  background: #6f4e37;
+  color: #f3ebe0;
   padding: 14px 16px;
   font-weight: bold;
   font-size: 1.2em;
@@ -312,9 +307,9 @@ main h2 {
   user-select: none;
 }
 
-/* Área das mensagens */
+/* Área de mensagens */
 #chatbot-messages {
-  background: #fdf7f0; /* bege quase branco */
+  background: #fdf7f0;
   padding: 16px;
   height: 300px;
   overflow-y: auto;
@@ -329,7 +324,7 @@ main h2 {
 
 /* Mensagem do bot */
 .bot-message {
-  background: #d7c4aa; /* bege médio */
+  background: #d7c4aa;
   padding: 10px 14px;
   border-radius: 18px 18px 18px 3px;
   max-width: 80%;
@@ -340,7 +335,7 @@ main h2 {
 
 /* Mensagem do usuário */
 .user-message {
-  background: #6f4e37; /* marrom café escuro */
+  background: #6f4e37;
   padding: 10px 14px;
   border-radius: 18px 18px 3px 18px;
   max-width: 80%;
@@ -349,7 +344,7 @@ main h2 {
   box-shadow: 0 2px 5px rgba(111, 78, 55, 0.3);
 }
 
-/* Formulário de input */
+/* Formulário do chatbot */
 #chatbot-form {
   display: flex;
   border-top: 1px solid #d7c4aa;
@@ -357,7 +352,7 @@ main h2 {
   padding: 10px 14px;
 }
 
-/* Input texto */
+/* Input de texto */
 #chatbot-input {
   flex-grow: 1;
   border: 1px solid #6f4e37;
@@ -367,23 +362,20 @@ main h2 {
   font-family: 'Georgia', serif;
   color: #4b3621;
   background: #fff8f0;
-  outline: none;
-  box-shadow: inset 0 2px 5px rgba(111, 78, 55, 0.1);
 }
 
-/* Botão enviar */
-#chatbot-form button {
+/* Botão de envio */
+#chatbot-send {
   background: #6f4e37;
   color: #f3ebe0;
   border: none;
-  padding: 0 18px;
-  font-weight: bold;
-  font-size: 1em;
-  cursor: pointer;
+  padding: 10px 16px;
   border-radius: 0 10px 10px 0;
-  transition: background-color 0.3s ease;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
 }
 
-#chatbot-form button:hover {
-  background: #543b27;
+#chatbot-send:hover {
+  background: #5b3d2d;
 }
