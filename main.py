@@ -71,7 +71,3 @@ def contato(request: Request):
 def pagina_projetos(request: Request):
     return templates.TemplateResponse("projetos.html", {"request": request, "projetos": projetos})
 
-@app.get("/chatbot")
-def pagina_projetos(request: Request):
-    return templates.TemplateResponse("chatbot.html", {"request": request, "projetos": projetos})
-
