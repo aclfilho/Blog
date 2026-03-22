@@ -47,17 +47,19 @@ projetos = [
         link="https://github.com/aclfilho/zarro",
         imagem="/static/img/zarro.png"  
     ),
+    
     Projeto(
-        id=3,
-        nome="EDA Análise Preditiva",
-        descricao="Análise preditiva e modelo de ML para previsões de preços de imóveis.",
-        tecnologias=["Python"],
-        status="Concluído",
-        categoria="Análise de dados",
-        link="https://github.com/aclfilho/Projeto-LH-CD/tree/main",
-        imagem="/static/img/eda.png" 
-    )
+    id=3,
+    nome="Biblioteca Pessoal",
+    descricao="Sistema web para registrar e organizar livros lidos, com avaliações, filtros e estatísticas.",
+    tecnologias=["Python", "FastAPI", "React", "JSON"],
+    status="Em desenvolvimento",
+    categoria="Fullstack",
+    link="https://github.com/aclfilho/biblioteca-pessoal",
+    imagem="/static/img/biblioteca.png"
+),
 ]
+
 
 @app.get("/")
 def home(request: Request):
